@@ -1,0 +1,17 @@
+#scenePane {
+    -fx-background-color: #1effd1;
+}
+
+#gameBoard {
+    -fx-background-color: #362b41;
+    -fx-background-radius: 10.0;
+    -fx-padding: 10;
+}
+
+#tile {
+    -fx-background-color: #d1eadf;
+}
+
+#tile:hover {
+    -fx-background-color: #c3d7ce;
+}

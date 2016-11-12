@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<project name="stegano" basedir="." default="build">
+	<property name="src.dir" value="src"/>
+	<property name="build.dir" value="build/classes"/>
+		
+	<target name="build">
+		<mkdir dir="${build.dir}"/>
+		<javac destdir="${build.dir}" source="1.8" target="1.8">
+			<src path="${src.dir}"/>
+		</javac>
+	</target>
+	
+	<target name="jar">
+		<jar destfile="tictactoe.jar">
+		<fileset dir="${build.dir}"/>
+			<manifest>
+				<attribute name="Main-Class" value="main.Main"/>
+			</manifest>
+		</jar>	
+	</target>
+	
+	<target name="clean">
+		<delete>
+			<fileset dir="${build.dir}">
+				<include name="**/*.class"/>
+			</fileset>
+		</delete>
+	</target>
+</project>
+	
+	
